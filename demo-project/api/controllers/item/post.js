@@ -1,7 +1,28 @@
-module.exports = async function(req, res){
-  const title = req.param('title')
-  const detail = req.param('detail')
+module.exports = {
+  friendlyName: 'post item',
+  description: 'update or create an item',
+  inputs: {
+    title: {
+      description: 'the title of the item to create or update',
+      type: 'string',
+      require: true
+    },
+    detail: {
+      description: 'the detail of the item to create or update',
+      type: 'string',
+      require: true
+    }
+  },
+  exits: {
+    success: {
+      responseType: 'redirect'
+    },
+    testError: {
 
-  await sails.models.item.create({ title, detail })
-  res.redirect('/item')
+    }
+  },
+  async fn(inputs, exits) {
+    await sails.models.item.create(inputs)
+    exits.success('/item')
+  }
 }
