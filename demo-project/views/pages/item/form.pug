@@ -1,0 +1,9 @@
+extends ../../layouts/index
+
+block body
+  form(method="post" action="/item")
+    .row 标题
+      input(name="title")
+    .row 详情
+      input(name="detail")
+    button(type="submit") 提交

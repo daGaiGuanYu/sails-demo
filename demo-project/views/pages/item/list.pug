@@ -1,0 +1,7 @@
+extends ../../layouts/index
+
+block body
+  a(href="/item/form") 添加
+  ul
+    each item in list
+      li= item.title
