@@ -15,7 +15,7 @@ module.exports = {
     }
   },
   async fn(inputs, exits) {
-    const record = await sails.models.item.destroy(inputs)
+    await sails.models.item.destroy(inputs)
     exits.success('/item.action')
   }
 }
