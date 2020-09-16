@@ -4,4 +4,13 @@ block body
   a(href="/item/form") 添加
   ul
     each item in list
-      li= item.title
+      li(onclick=`handleClickItem(event, ${item.id})`)
+        span #{item.title}
+        button(data-type="info") 详情
+        button(data-type="drop") 删除
+
+  script.
+    function handleClickItem(e, id){
+      const type = e.target.dataset.type
+      console.log(type, id)
+    }
