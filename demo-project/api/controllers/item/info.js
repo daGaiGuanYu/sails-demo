@@ -19,6 +19,9 @@ module.exports = {
   async fn(inputs, exits) {
     // inputs 的构造函数是 Object
     const record = await sails.models.item.findOne(inputs)
-    exits.success(record)
+    exits.success({
+      pageTitle: record.title + '-详情',
+      data: record
+    })
   }
 }
