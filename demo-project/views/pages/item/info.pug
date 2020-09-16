@@ -1,11 +1,6 @@
--
-  const pageTitle = '详情'
+extends ../../layouts/main.pug
 
-doctype html
-html
-  include ../../common/head.pug
-
-  body
-    +backLink('返回')
-    .row= data.title
-    .row= data.detail
+block body
+  +backLink('返回')
+  .row= data.title
+  .row= data.detail

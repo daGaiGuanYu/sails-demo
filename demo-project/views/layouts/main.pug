@@ -1,5 +1,9 @@
+mixin backLink(backTxt="back")
+  a(onclick="history.back(-1)")= backTxt
+
 doctype html
 html
   head
-    title= pageTitle||'demo-project(todo)'
+    block title
+      title 'demo-project(todo)
   block body
