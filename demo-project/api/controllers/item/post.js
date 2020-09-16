@@ -26,6 +26,6 @@ module.exports = {
   },
   async fn(inputs, exits) {
     await sails.models.item.create(inputs)
-    exits.success('/item')
+    exits.success('/item.action')
   }
 }
