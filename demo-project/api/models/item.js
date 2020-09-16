@@ -2,7 +2,8 @@ module.exports = {
   attributes: {
     title: {
       type: 'string',
-      required: true
+      required: true,
+      unique: true
     },
     detail: {
       type: 'string',

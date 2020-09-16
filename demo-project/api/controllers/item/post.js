@@ -2,6 +2,9 @@ module.exports = {
   friendlyName: 'post item',
   description: 'update or create an item',
   inputs: {
+    id: {
+      type: 'number'
+    },
     title: {
       description: 'the title of the item to create or update',
       type: 'string',
