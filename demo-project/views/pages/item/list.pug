@@ -6,11 +6,10 @@ block body
     each item in list
       li(onclick=`handleClickItem(event, ${item.id})`)
         span #{item.title}
-        button(data-type="info") 详情
-        button(data-type="drop") 删除
+        a(href="/item/info.action?id=" + item.id) 详情
+        a(href="/item/drop.action?id=" + item.id) 删除
 
   script.
-    function handleClickItem(e, id){
-      const type = e.target.dataset.type
-      console.log(type, id)
+    function go(){
+      // 划水函数
     }
