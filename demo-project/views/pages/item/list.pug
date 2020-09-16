@@ -1,15 +1,20 @@
-extends ../../layouts/main
+-
+  const pageTitle = '列表'
 
-block body
-  a(href="/item/form") 添加
-  ul
-    each item in list
-      li(onclick=`handleClickItem(event, ${item.id})`)
-        span #{item.title}
-        a(href="/item/info.action?id=" + item.id) 详情
-        a(href="/item/drop.action?id=" + item.id) 删除
+doctype html
+html
+  include ../../common/head.pug
 
-  script.
-    function go(){
-      // 划水函数
-    }
+  body
+    a(href="/item/form") 添加
+    ul
+      each item in list
+        li(onclick=`handleClickItem(event, ${item.id})`)
+          span #{item.title}
+          a(href="/item/info.action?id=" + item.id) 详情
+          a(href="/item/drop.action?id=" + item.id) 删除
+
+    script.
+      function go(){
+        // 划水函数
+      }

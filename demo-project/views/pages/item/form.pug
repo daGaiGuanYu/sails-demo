@@ -1,9 +1,14 @@
-extends ../../layouts/main
+-
+  const pageTitle = data?'更新':'新建'
 
-block body
-  form(method="post" action="/item.action")
-    .row 标题
-      input(name="title")
-    .row 详情
-      input(name="detail")
-    button(type="submit") 提交
+doctype html
+html
+  include ../../common/head.pug
+
+  body
+    form(method="post" action="/item.action")
+      .row 标题
+        input(name="title")
+      .row 详情
+        input(name="detail")
+      button(type="submit") 提交

@@ -1,0 +1,5 @@
+mixin backLink(backTxt="back")
+  a(onclick="history.back(-1)")= backTxt
+
+head
+  title= pageTitle||'demo-project(todo)'
