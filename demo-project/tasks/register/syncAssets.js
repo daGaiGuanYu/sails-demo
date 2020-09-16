@@ -9,7 +9,7 @@
  */
 module.exports = function(grunt) {
   grunt.registerTask('syncAssets', [
-    'less:dev',
+    'stylus:dev',
     'sync:dev',
   ]);
 };

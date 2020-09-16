@@ -17,7 +17,8 @@
     "sails-hook-sockets": "^2.0.0"
   },
   "devDependencies": {
-    "eslint": "5.16.0"
+    "eslint": "5.16.0",
+    "grunt-contrib-stylus": "^1.2.0"
   },
   "scripts": {
     "dev": "nodemon sails lift",
