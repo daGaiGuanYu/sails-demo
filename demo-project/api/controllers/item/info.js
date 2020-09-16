@@ -20,7 +20,6 @@ module.exports = {
     // inputs 的构造函数是 Object
     const record = await sails.models.item.findOne(inputs)
     exits.success({
-      pageTitle: record.title + '-详情',
       data: record
     })
   }
