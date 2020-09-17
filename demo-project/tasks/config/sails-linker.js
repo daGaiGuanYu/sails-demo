@@ -4,7 +4,7 @@
  * ---------------------------------------------------------------
  *
  * Automatically inject <script> tags and <link> tags into the specified
- * specified HTML and/or EJS files.  The specified delimiters (`startTag`
+ * specified HTML and/or pug files.  The specified delimiters (`startTag`
  * and `endTag`) determine the insertion points.
  *
  * For more information, see:
@@ -32,7 +32,7 @@ module.exports = function(grunt) {
       files: {
         '.tmp/public/**/*.html': require('../pipeline').jsFilesToInject,
         'views/**/*.html': require('../pipeline').jsFilesToInject,
-        'views/**/*.ejs': require('../pipeline').jsFilesToInject
+        'views/**/*.pug': require('../pipeline').jsFilesToInject
       }
     },
 
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
       files: {
         '.tmp/public/**/*.html': require('../pipeline').jsFilesToInject,
         'views/**/*.html': require('../pipeline').jsFilesToInject,
-        'views/**/*.ejs': require('../pipeline').jsFilesToInject
+        'views/**/*.pug': require('../pipeline').jsFilesToInject
       }
     },
 
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
       files: {
         '.tmp/public/**/*.html': ['.tmp/public/min/production.min.js'],
         'views/**/*.html': ['.tmp/public/min/production.min.js'],
-        'views/**/*.ejs': ['.tmp/public/min/production.min.js']
+        'views/**/*.pug': ['.tmp/public/min/production.min.js']
       }
     },
 
@@ -80,7 +80,7 @@ module.exports = function(grunt) {
       files: {
         '.tmp/public/**/*.html': ['.tmp/public/dist/*.js'],
         'views/**/*.html': ['.tmp/public/dist/*.js'],
-        'views/**/*.ejs': ['.tmp/public/dist/*.js']
+        'views/**/*.pug': ['.tmp/public/dist/*.js']
       }
     },
 
@@ -102,7 +102,7 @@ module.exports = function(grunt) {
       files: {
         '.tmp/public/**/*.html': require('../pipeline').cssFilesToInject,
         'views/**/*.html': require('../pipeline').cssFilesToInject,
-        'views/**/*.ejs': require('../pipeline').cssFilesToInject
+        'views/**/*.pug': require('../pipeline').cssFilesToInject
       }
     },
 
@@ -120,7 +120,7 @@ module.exports = function(grunt) {
       files: {
         '.tmp/public/**/*.html': require('../pipeline').cssFilesToInject,
         'views/**/*.html': require('../pipeline').cssFilesToInject,
-        'views/**/*.ejs': require('../pipeline').cssFilesToInject
+        'views/**/*.pug': require('../pipeline').cssFilesToInject
       }
     },
 
@@ -134,7 +134,7 @@ module.exports = function(grunt) {
       files: {
         '.tmp/public/index.html': ['.tmp/public/min/production.min.css'],
         'views/**/*.html': ['.tmp/public/min/production.min.css'],
-        'views/**/*.ejs': ['.tmp/public/min/production.min.css']
+        'views/**/*.pug': ['.tmp/public/min/production.min.css']
       }
     },
 
@@ -151,7 +151,7 @@ module.exports = function(grunt) {
       files: {
         '.tmp/public/index.html': ['.tmp/public/dist/*.css'],
         'views/**/*.html': ['.tmp/public/dist/*.css'],
-        'views/**/*.ejs': ['.tmp/public/dist/*.css']
+        'views/**/*.pug': ['.tmp/public/dist/*.css']
       }
     },
 
