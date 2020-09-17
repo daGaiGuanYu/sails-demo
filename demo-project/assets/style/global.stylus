@@ -8,5 +8,8 @@ a
   color: blue
   text-decoration: none
   cursor: pointer
+  margin: 0 10px
+  & + a
+    margin-left: 0
 a:active
   opacity: 0.7
